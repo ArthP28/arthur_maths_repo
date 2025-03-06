@@ -1,16 +1,19 @@
 #include <iostream>
 using namespace std;
 
-void square(int& num);
+void power(int& num, int power);
 
 int main()
 {
-    int numberToSquare = 3;
-    square(numberToSquare);
+    int numberToSquare = 9;
+    power(numberToSquare, 3);
     cout << numberToSquare <<endl;
     return 0;
 }
 
-void square(int& num){
-    num *= num;
+void power(int& num, int power){
+    int expRef = num;
+    for(int i = 0; i < power - 1; i++){
+        num *= expRef;
+    }
 }
