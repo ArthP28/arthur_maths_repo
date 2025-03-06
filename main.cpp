@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-void power(double& num, int power);
+double power(double num, int power);
 
 int main()
 {
@@ -10,7 +10,7 @@ int main()
     return 0;
 }
 
-double power(double& num, int power){
+double power(double num, int power){
     double expRef = num;
     double numToPower = num;
     for(int i = 0; i < power - 1; i++){
