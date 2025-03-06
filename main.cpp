@@ -1,8 +1,16 @@
 #include <iostream>
 using namespace std;
 
+void square(int& num);
+
 int main()
 {
-    cout<<"Github Test"<<endl;
+    int numberToSquare = 3;
+    square(numberToSquare);
+    cout << numberToSquare <<endl;
     return 0;
+}
+
+void square(int& num){
+    num *= num;
 }
