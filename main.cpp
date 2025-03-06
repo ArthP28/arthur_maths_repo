@@ -6,14 +6,15 @@ void power(double& num, int power);
 int main()
 {
     double numberToSquare = 9.5;
-    power(numberToSquare, 3);
-    cout << numberToSquare <<endl;
+    cout << power(numberToSquare, 3) <<endl;
     return 0;
 }
 
-void power(double& num, int power){
+double power(double& num, int power){
     double expRef = num;
+    double numToPower = num;
     for(int i = 0; i < power - 1; i++){
-        num *= expRef;
+        numToPower *= expRef;
     }
+    return numToPower;
 }
