@@ -1,17 +1,18 @@
 #include <iostream>
 using namespace std;
 
-int power(int num, int power);
+void power(double& num, int power);
 
 int main()
 {
-    cout << power(9, 3) << endl;
+    double numberToSquare = 9.5;
+    cout << power(numberToSquare, 3) <<endl;
     return 0;
 }
 
-int power(int num, int power){
-    int numToPower = num;
-    int expRef = num;
+double power(double& num, int power){
+    double expRef = num;
+    double numToPower = num;
     for(int i = 0; i < power - 1; i++){
         numToPower *= expRef;
     }
